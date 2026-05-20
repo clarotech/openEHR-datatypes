@@ -12,7 +12,7 @@
     <Authors>HealthTech</Authors>
     <Description>C# implementation of the openEHR Reference Model Release 1.1.0 Data Types specification.</Description>
     <PackageTags>openehr;ehr;datatypes;healthcare;hl7;rm</PackageTags>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Deterministic>true</Deterministic>
@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <None Include="..\README.md" Pack="true" PackagePath="\" Condition="Exists('..\README.md')" />
+    <None Include="..\LICENSE.txt" Pack="true" PackagePath="\" Condition="Exists('..\LICENSE.txt')" />
   </ItemGroup>
 
 </Project>
