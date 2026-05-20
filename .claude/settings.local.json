@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:specifications.openehr.org)"
+      "WebFetch(domain:specifications.openehr.org)",
+      "PowerShell(New-Item *)"
     ]
   }
 }
