@@ -95,6 +95,9 @@ public sealed class DvDuration : DvAmount, IEquatable<DvDuration>, IComparable<D
         return new DvDuration(sb.ToString());
     }
 
+    /// <summary>True if <paramref name="other"/> is a DvDuration (same comparable type).</summary>
+    public override bool IsStrictlyComparableTo(DvOrdered other) => other is DvDuration;
+
     public override DvAmount ArithmeticAdd(DvAmount other)
     {
         if (other is not DvDuration d)

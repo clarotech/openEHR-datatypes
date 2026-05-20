@@ -25,6 +25,9 @@ public sealed class DvTime : DvTemporal, IEquatable<DvTime>, IComparable<DvTime>
     public bool HasTimezone => Timezone is not null;
     public bool IsPartial => Minute is null || Second is null;
 
+    /// <summary>True if <paramref name="other"/> is a DvTime (same comparable type).</summary>
+    public override bool IsStrictlyComparableTo(DvOrdered other) => other is DvTime;
+
     public override double Magnitude =>
         Hour * 3600 + (Minute ?? 0) * 60 + (Second ?? 0) + (FractionalSecond ?? 0);
 

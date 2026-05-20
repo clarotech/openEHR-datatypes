@@ -45,4 +45,11 @@ public abstract class DvQuantified : DvOrdered
     /// <summary>True if magnitude is exactly known (status is null or "=").</summary>
     public bool MagnitudeStatusIsExact() =>
         MagnitudeStatus is null || MagnitudeStatus == Quantity.MagnitudeStatus.Equal;
+
+    /// <summary>
+    /// True if <paramref name="s"/> is a valid magnitude status string (null is also valid,
+    /// meaning the status is unset).
+    /// openEHR RM 1.1.0: DV_QUANTIFIED.valid_magnitude_status
+    /// </summary>
+    public static bool ValidMagnitudeStatus(string? s) => Quantity.MagnitudeStatus.IsValid(s);
 }

@@ -23,6 +23,9 @@ public class DvOrdinal : DvOrdered, IEquatable<DvOrdinal>, IComparable<DvOrdinal
         Value = value;
     }
 
+    /// <summary>True if <paramref name="other"/> is a DvOrdinal (same comparable type).</summary>
+    public override bool IsStrictlyComparableTo(DvOrdered other) => other is DvOrdinal;
+
     public override int CompareTo(DvOrdered? other)
     {
         if (other is null) return 1;

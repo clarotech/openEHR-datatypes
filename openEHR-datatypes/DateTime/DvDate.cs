@@ -44,6 +44,9 @@ public sealed class DvDate : DvTemporal, IEquatable<DvDate>, IComparable<DvDate>
 
     public bool IsPartial => Month is null || Day is null;
 
+    /// <summary>True if <paramref name="other"/> is a DvDate (same comparable type).</summary>
+    public override bool IsStrictlyComparableTo(DvOrdered other) => other is DvDate;
+
     /// <summary>Converts to System.DateOnly if the date is complete.</summary>
     public DateOnly ToDateOnly()
     {

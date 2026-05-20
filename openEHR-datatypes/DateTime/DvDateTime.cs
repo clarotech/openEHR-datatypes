@@ -29,6 +29,9 @@ public sealed class DvDateTime : DvTemporal, IEquatable<DvDateTime>, IComparable
     public bool IsPartial => Month is null || Day is null || Hour is null;
     public bool HasTimezone => Timezone is not null;
 
+    /// <summary>True if <paramref name="other"/> is a DvDateTime (same comparable type).</summary>
+    public override bool IsStrictlyComparableTo(DvOrdered other) => other is DvDateTime;
+
     public override double Magnitude =>
         Year * 365.25 * 86400 +
         (Month ?? 1) * 30.4375 * 86400 +

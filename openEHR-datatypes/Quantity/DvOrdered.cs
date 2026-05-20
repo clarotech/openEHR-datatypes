@@ -26,6 +26,13 @@ public abstract class DvOrdered : DataValue, IComparable<DvOrdered>
     public abstract int CompareTo(DvOrdered? other);
 
     /// <summary>
+    /// True if this value and <paramref name="other"/> are of the same type (and, where
+    /// applicable, have compatible units/scale) so that they can be meaningfully compared.
+    /// openEHR RM 1.1.0: DV_ORDERED.is_strictly_comparable_to
+    /// </summary>
+    public abstract bool IsStrictlyComparableTo(DvOrdered other);
+
+    /// <summary>
     /// True if there is no normal range or status and no other reference ranges.
     /// </summary>
     public bool IsSimple() => NormalRange is null && NormalStatus is null &&

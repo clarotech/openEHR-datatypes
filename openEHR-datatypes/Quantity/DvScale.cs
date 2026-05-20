@@ -24,6 +24,9 @@ public sealed class DvScale : DvOrdered, IEquatable<DvScale>, IComparable<DvScal
         Value = value;
     }
 
+    /// <summary>True if <paramref name="other"/> is a DvScale (same comparable type).</summary>
+    public override bool IsStrictlyComparableTo(DvOrdered other) => other is DvScale;
+
     public override int CompareTo(DvOrdered? other)
     {
         if (other is null) return 1;

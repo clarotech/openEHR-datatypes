@@ -26,6 +26,9 @@ public sealed class DvCount : DvAmount, IEquatable<DvCount>, IComparable<DvCount
         _magnitude = magnitude;
     }
 
+    /// <summary>True if <paramref name="other"/> is a DvCount (same comparable type).</summary>
+    public override bool IsStrictlyComparableTo(DvOrdered other) => other is DvCount;
+
     public override DvAmount ArithmeticAdd(DvAmount other)
     {
         if (other is not DvCount c)

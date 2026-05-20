@@ -71,6 +71,14 @@ public sealed class DvProportion : DvAmount, IEquatable<DvProportion>, IComparab
     /// <summary>True if the proportion is an integer fraction (Fraction type).</summary>
     public bool IsIntegral() => Type == ProportionKind.Fraction;
 
+    /// <summary>
+    /// True if <paramref name="other"/> is a DvProportion of the same kind, so the two
+    /// values are on a common scale and can be meaningfully compared.
+    /// openEHR RM 1.1.0: DV_ORDERED.is_strictly_comparable_to
+    /// </summary>
+    public override bool IsStrictlyComparableTo(DvOrdered other) =>
+        other is DvProportion p && p.Type == Type;
+
     public override DvAmount ArithmeticAdd(DvAmount other)
     {
         if (other is not DvProportion p || p.Type != Type || p.Denominator != Denominator)

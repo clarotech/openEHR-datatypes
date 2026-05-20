@@ -45,6 +45,14 @@ public sealed class DvQuantity : DvAmount, IEquatable<DvQuantity>, IComparable<D
     /// <summary>True if the quantity represents an integral value (no fractional part).</summary>
     public bool IsIntegral() => Precision == 0 || _magnitude == Math.Truncate(_magnitude);
 
+    /// <summary>
+    /// True if <paramref name="other"/> is a DvQuantity with the same units, meaning the two
+    /// values share a common scale and can be meaningfully compared.
+    /// openEHR RM 1.1.0: DV_ORDERED.is_strictly_comparable_to
+    /// </summary>
+    public override bool IsStrictlyComparableTo(DvOrdered other) =>
+        other is DvQuantity q && q.Units == Units;
+
     public override DvAmount ArithmeticAdd(DvAmount other)
     {
         if (other is not DvQuantity q)
