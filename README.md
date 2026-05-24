@@ -1,4 +1,4 @@
-# OpenEHR.RM.DataTypes
+# Clarotech.OpenEHR.RM.Datatypes
 
 A C# implementation of the [openEHR Reference Model Release 1.1.0 Data Types](https://specifications.openehr.org/releases/RM/Release-1.1.0/data_types.html) specification.
 

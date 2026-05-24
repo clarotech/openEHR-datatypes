@@ -7,9 +7,9 @@
     <Nullable>enable</Nullable>
 
     <!-- NuGet package metadata -->
-    <PackageId>OpenEHR.RM.DataTypes</PackageId>
+    <PackageId>Clarotech.OpenEHR.RM.Datatypes</PackageId>
     <Version>1.1.0</Version>
-    <Authors>HealthTech</Authors>
+    <Authors>Clarotech</Authors>
     <Description>C# implementation of the openEHR Reference Model Release 1.1.0 Data Types specification.</Description>
     <PackageTags>openehr;ehr;datatypes;healthcare;hl7;rm</PackageTags>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
