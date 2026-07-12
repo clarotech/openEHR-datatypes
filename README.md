@@ -7,8 +7,8 @@ A C# implementation of the [openEHR Reference Model Release 1.1.0 Data Types](ht
 | Package | Namespace | Classes |
 |---|---|---|
 | `data_types.basic` | `OpenEHR.RM.DataTypes.Basic` | `DataValue`, `DvBoolean`, `DvIdentifier`, `DvState` |
-| `data_types.text` | `OpenEHR.RM.DataTypes.Text` | `DvText`, `DvCodedText`, `CodePhrase`, `TermMapping`, `TerminologyId` |
-| `data_types.quantity` | `OpenEHR.RM.DataTypes.Quantity` | `DvOrdered`, `DvOrdinal`, `DvScale`, `DvQuantified`, `DvAmount`, `DvQuantity`, `DvCount`, `DvProportion`, `DvInterval<T>`, `ReferenceRange<T>` |
+| `data_types.text` | `OpenEHR.RM.DataTypes.Text` | `DvText`, `DvCodedText`, `CodePhrase`, `TermMapping`, `TerminologyId`, `DvParagraph` (deprecated) |
+| `data_types.quantity` | `OpenEHR.RM.DataTypes.Quantity` | `DvOrdered`, `DvOrdinal`, `DvScale`, `DvQuantified`, `DvAmount`, `DvAbsoluteQuantity`, `DvQuantity`, `DvCount`, `DvProportion`, `DvInterval<T>`, `ReferenceRange<T>` |
 | `data_types.date_time` | `OpenEHR.RM.DataTypes.DateTime` | `DvTemporal`, `DvDate`, `DvTime`, `DvDateTime`, `DvDuration` |
 | `data_types.time_specification` | `OpenEHR.RM.DataTypes.TimeSpecification` | `DvTimeSpecification`, `DvPeriodicTimeSpecification`, `DvGeneralTimeSpecification` |
 | `data_types.uri` | `OpenEHR.RM.DataTypes.Uri` | `DvUri`, `DvEhrUri` |
