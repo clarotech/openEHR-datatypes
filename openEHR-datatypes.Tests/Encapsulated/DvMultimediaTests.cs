@@ -80,4 +80,12 @@ public class DvMultimediaTests
         var mm = new DvMultimedia(MediaType(), data: new byte[] { 1 }, alternateText: "A photo");
         mm.AlternateText.Should().Be("A photo");
     }
+
+    [Fact]
+    public void Thumbnail_IsStoredCorrectly()
+    {
+        var thumbnail = new DvMultimedia(MediaType(), data: new byte[] { 9 });
+        var mm = new DvMultimedia(MediaType(), data: new byte[] { 1, 2, 3 }, thumbnail: thumbnail);
+        mm.Thumbnail.Should().BeSameAs(thumbnail);
+    }
 }

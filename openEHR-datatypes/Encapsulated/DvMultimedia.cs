@@ -17,6 +17,7 @@ public sealed class DvMultimedia : DvEncapsulated
     public byte[]? IntegrityCheck { get; }
     public DvUri? Uri { get; }
     public string? AlternateText { get; }
+    public DvMultimedia? Thumbnail { get; }
 
     public override int Size => Data?.Length ?? 0;
 
@@ -28,6 +29,7 @@ public sealed class DvMultimedia : DvEncapsulated
         byte[]? integrityCheck = null,
         DvUri? uri = null,
         string? alternateText = null,
+        DvMultimedia? thumbnail = null,
         CodePhrase? language = null,
         CodePhrase? charset = null)
         : base(language, charset)
@@ -42,6 +44,7 @@ public sealed class DvMultimedia : DvEncapsulated
         IntegrityCheck = integrityCheck;
         Uri = uri;
         AlternateText = alternateText;
+        Thumbnail = thumbnail;
     }
 
     /// <summary>
