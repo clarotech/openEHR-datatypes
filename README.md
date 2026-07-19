@@ -43,7 +43,7 @@ var duration = new DvDuration("P1Y6M");
 
 ## Versioning
 
-The library version tracks the openEHR RM release: version `1.1.0` corresponds to RM Release-1.1.0.
+The library targets openEHR RM Release-1.1.0. The major.minor version (`1.1.x`) matches that RM release; the patch number increments independently for library fixes and additions that don't change the targeted spec release.
 
 ## License
 
